@@ -1,0 +1,221 @@
+
+<!--modiry by wenyiru 将原来5.1兼容的语句去掉-->
+<!--唯你网5.0的样式(旧)-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="icon" href="http://onlyouoss.onlyou.com/site/base/2017-06-07/d01a3e59d9af4c6e88da16ff15db170a" type="image/x-icon" />
+
+<title>欢迎登录</title>
+        <link rel="stylesheet" type="text/css" href="/assets/style/front-v5/css/global.min.css?ver=20180531210236" />
+        <link rel="stylesheet" type="text/css" href="/assets/style/front-v5/css/login.min.css?ver=20180531210236" />
+            <!--[if lt IE 9]>
+        <script src="/assets/js/framework/lib/json/json2.min.js"></script><![endif]-->
+        <script type="text/javascript">
+    var App = {"contextPath":"",
+        "staticContextPath":"",
+        "jsDebug":false,
+        "language":"zh_CN",
+        "accountdomain" : "http://accounting.zyd.onlyou.com/",
+        "jwCreditdomain" : "http://riviews.chinaj.com:8088/spider-web",
+        "jrydomain" : "http://jry.onlyou.com",
+        "uploadPathDomain" : "http://resource.onlyou.com/onlyou/",
+        "staticResourceVersion":("20180531210236"?"20180531210236":1)
+    };
+</script>
+
+<script src="/assets/js/framework/lib/require/require.all.min.js?ver=20180531210236" data-main="/assets/js/user/login/login.min.js?ver=20180531210236"></script>
+            <meta name="baidu-site-verification" content="EVWAPB2Aup" />
+</head>
+
+<style type="text/css">
+    .pas-form .input-error-tip{ margin-left: 100px; color: #c55;}
+</style>
+
+<body>
+    <style>
+    .login-bar {height: 70px;}
+    .login-bar .login-img {margin-top: 6px;width: auto;height:58px;}
+    .login-cobg.login-bar .smartop-left {margin-left: 10px;padding: 34px 0 6px;}
+    .login-cobg  .smartop-right li{height: 70px;line-height: 70px;}
+    .login-cobg .smartop-right > ul > li:after{top:29px;}
+    .login-cobg .smartop-right li i{top:20px;}
+    .login-cobg .entrance{top:70px;}
+</style>
+
+<div class="topbar login-bar login-cobg">
+    <div class="w1100 smartop">
+        <div class="fl">
+            <a href="/"><img src="http://onlyouoss.onlyou.com/site/base/2017-06-06/c1bcf8292af94cbf9c25f81e7e61a523" alt="" class="login-img"></a>
+
+            </div>
+        <div class="smartop-left train fl">
+            
+                唯你网
+                欢迎您！
+            </div>
+        <div class="smartop-right fr">
+            <ul>
+                <li>
+                        <a href="/user/login/login.htm">登录</a>
+                    </li>
+                    <li>
+                        <a href="/user/register/init.htm">注册</a>
+                    </li>
+                    <li>
+                        <a class="active" href="javascript:void(0);">账益达 <em></em> <i class="icon-drop"></i> </a>
+                        <div class="entrance">
+                            <a href="http://zyd.onlyou.com/login.htm">服务商加盟入口</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="/help/help-agreement.htm">帮助</a>
+                    </li>
+                    </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="login-common"
+             style="background-image: url(../../../../assets/style/front-v5/images/loginbg.png);" 
+            >
+        <div class="w1100 rela">
+            <div class="login-box login-zp">
+                <h2 class="login-h2">登录</h2>
+                <form id="form-login" action="/user/login/login.htm" method="post" class="login-form">
+                    <!--JS错误提示   login_tip-->
+                    <div class="msg-box">
+                        <div id="msgWarn" class="login-tip"><span class="err e"><i></i>请勿将密码与账号透露给他人</span></div>
+                                <div id="msgError" class="login-tip err-tip" style="display: none;"><span class="err e"><i></i></span></div>
+                            </div>
+
+                    <div class="form-group login-text">
+                        <label class="lab" for="username"></label>
+                        <input type="text" id="username" name="username" tabindex="1" value="" placeholder="邮箱/用户名/手机号" maxlength="30">
+                    </div>
+                    <!--<p class="error-tip"><em>用户名不能为空</em></p>-->
+                    <div class="form-group login-text marb10">
+                        <label class="lab pass" for="forePassword"></label>
+                        <input type="password" id="forePassword" name="forePassword" tabindex="2" placeholder="密码" maxlength="20">
+                        <input type="hidden" id="password" name="password" value="">
+                    </div>
+                    <!--<p class="error-tip"><em>密码错误，请重新输入</em></p>-->
+
+                    <button type="button" tabindex="4" class="log-login js-btn-submit">立即登录</button>
+                    <p class="foget">
+                        <a href="/user/findpassword/init.htm">忘记密码?</a>
+                        <em>|</em>
+                        <a href="/user/register/init.htm" class="free-regis">免费注册</a>
+                        </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script id="tplVerifyPhoneDialog" type="text/template">
+        <div class="verifyfrom" style="margin:10px 20px;">
+            <form id="formVerifyPhone" class="pas-form pas_fr">
+                <input id="msgId" name="msgId" value="" type="hidden">
+                <input id="userId" name="userId" value="" type="hidden">
+                <div class="form-group clearfix">
+                    <label>为保证您的账号安全，请先进行安全验证</label>
+                </div>
+                <div class="form-group clearfix">
+                    <label class="pas_font marr10" style="width: 90px;">手机号</label>
+                    <input id="mobile" name="mobile" style="line-height: 35px;" value="">
+                </div>
+                <div class="form-group marb30 clearfix ">
+                    <label for="vcode" class="pas_font" style="width: 90px;">图形验证码</label>
+                    <div class="pas_section">
+                        <input type="text" name="vcode" placeholder="图片验证码">
+                    </div>
+                    <a href="javascript:void(0);" class="code-img"><img src="/user/register/vcode.htm" alt=""></a>
+                </div>
+                <div class="form-group marb30 clearfix ">
+                    <label for="authCode" class="pas_font" style="width: 90px;">短信验证码</label>
+                    <div class="pas_section">
+                        <input type="text" id="authCode" name="authCode" placeholder="短信验证码">
+                    </div>
+                    <span id="setCodeBtn" class="btn btn_orange marl10" style="width: 94px;display: inline-block; float: none;">获取验证码</span>
+                    <span id="setCodeDisBtn" class="btn btn_grey marl10" style="float: none;display: none;"></span>
+                </div>
+            </form>
+        </div>
+    </script>
+
+
+    <script id="tplUpdatePasswordDialog" type="text/template">
+        <div class="verifyfrom" style="margin:10px 20px;">
+            <form id="formUpdatePassword" class="pas-form pas_fr">
+                <input id="userId" name="userId" value="" type="hidden">
+                <div class="form-group clearfix">
+                    <label class="pas_font marr10" style="width: 90px;">新密码</label>
+                    <input type="password" name="password" style="line-height: 35px;" value="" placeholder="密码长度只能在6-20位数字和字母的组合">
+                </div>
+                <div class="form-group clearfix">
+                    <label class="pas_font marr10" style="width: 90px;">确认新密码</label>
+                    <input type="password" name="repassword" style="line-height: 35px;" value="">
+                </div>
+            </form>
+        </div>
+    </script>
+
+
+    <script type="text/javascript">
+        var needVerifyPhone = false;
+    </script>
+
+    <div class="valifooter">
+        <div class="w1100">Copyright 2013-2018 深圳商集企业服务有限公司粤ICP备15106072号-3<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502000237" target="_blank">
+                <img style="display: inline-block; margin:0 5px 0 10px; vertical-align: -4px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAC3FBMVEUAAAD+/ODz6Kr//+PeqFfYrn3x167k0JXoxnyaaVzhs2ifaFXbrGLkvFnpyF7v2X/kwm3cp1nhsGfqw3rZqG3ntVzjrFPt3oDjvGnfr2fbnFGti3q0lH7ktoLryXn9v1T4znr/74bnvGz034v+2I/ktoDz6ZLkwY/Dfz7buoftzYbq2IPr0pjs3bLv6KPRrnbKhFv79ND488n/+dDZr4Lx38f/+cH/95f42oL7/97s2Y3++uzw1rvTk3DmuloAAHkBAm7uzWYAAGXktV3qvFr/0ljksE7fo0rWHxhrdocAAIAABHf143Pyy27w1GwGA2jtymHpwWDqxV/qyVyTeFrrwFflwFPislP+xVLpsErbmUfVkEbysETemUTpgj7ThT3XdTg5FDjdhTXWZTDaTCm7TCbTOCLXPiD9LA/QFg3UAwnOAQOEj5kcPpdyhZSptJEACJFpfo4AG44XMInFvYfTvIejmYSVkINyeoJzdoK9un6SjX7FrnwAEHp8enny2HjWwHjKtnhcX3jYzHeNhnfu2HWUjHWsonPNwnH70m9WTm8AAW//723pym3dtmn/0mbnxGa0o2ZeWWb8zGT/4mPtwmJuYmL/22D/vmB5ZGC9kF7/2l0MAF3uyFqnjVn4xFjYnli0mVi5i1jiqVfyyVbmtlbXkVNUOFPlvFLpt1LNrFKjfVLuvlBgHlDsuU/ouU9ONU/ov05ODk7/2E02Gk3jqkqEaUr/tUngjkf7n0bXikb6xERCJETdn0LckUG1gD/ooD3Ulj3jkz3TZT3WjjzOeDqBWDr3pDnglTlMADnbbTf2gjbkbzaTYDZpAjbplzTtcTTEazPXXzOeXzDscS3MPi38jizJWSrVSCrrXynzfCjVdCjZRyjTQCbFUiTlYCPXPSHLPSHWMR/wXh7iRh7GPh3PLBrSIRrWGhfMJxPGJxPRDBG/ABG2ABCxDg7BDAvEGArZAAbJAALPAADa4ry/AAAAPnRSTlMACEIaxqxpAvv7+ff19PDs7Ovn5uXk5OHg29LRy8fEw8G+vLqysaufnJiVk4yDfG9dXFpMSEFBNTApJyEcFO3QiBQAAAFzSURBVBjTYoACZjYZaTZmBmRgxsp9+di21ZysxggxxlmJZy/ev9LXnriIEa5VYUPIray0lOyd+ctVoKKWXFsmXXvu8exO5vsZnnuErcCC5m1e8x5nPXrxOu3TzSqHFguQmI18tff+Jx89HqR7fE5v7q5TtAYK6h8v81p4Ovv6wbAdmRc6HMpddYGCmudrCqbtTn2anHBq15SZ9iUx6kBBkSTfXIfUuBsPL909c9i/uP6EJFAQMJ6j2/Ps32Yk30uIy3jjXxgRLwEUVN07ubTo5LsPr16mXD1X29gZrgUUlN23uD/H28lp09o5TvYVs523ygEFORYsO+TbEOI5cVVTV+XUA1Fu/EBBoxXu0bfnT98cEePa45oUHR7MBHK9IV9Y/BFHFzc7R7/YqF4BsBiDqVBw0NLQoMAAF3c7vwmCEEFln1ZnZxe3wJWx7nZ2jj5qkNDU5l2/ZE3kusjQuRsDxPXYoQFqa6DBIiUmyqKkYwIWAgD35oZAL/mkFwAAAABJRU5ErkJggg==" alt="" />粤公网安备 44030502000237号
+            </a>
+        </div>
+    </div>
+
+<script>
+    require(["jQuery"], function () {
+        $.ajax({
+            type: "post",
+            url: App.contextPath + "/common/getStatisticsScript.json",
+            success: function (result) {
+                if (result.success) {
+                    var scriptStr = $.trim(result.info);
+                    if (scriptStr) {
+                        scriptStr = scriptStr.replace(/^&lt;script.*?&gt;/, "")
+                            .replace(/&lt;\/script&gt;$/, "")
+                            .replace(/&amp;/g, "&")
+                            .replace(/&lt;/g, "<")
+                            .replace(/&gt;/g, ">")
+                            .replace(/&nbsp;/g, " ")
+                            .replace(/&#39;/g, "\'")
+                            .replace(/&quot;/g, "\"")
+                            .replace(/<br\/>/g, "\n");
+
+                        var s = document.getElementsByTagName("script")[0];
+                        var hm = document.createElement("script");
+                        hm.type = 'text/javascript';
+                        hm.innerHTML = scriptStr;
+                        s.parentNode.insertBefore(hm, s);
+                    }
+                }
+            },
+            error:function () {
+                console.log("加载统计代码失败！");
+            }
+        });
+
+    })
+</script>
+
+</body>
+
+</html>

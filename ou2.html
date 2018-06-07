@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>欢迎登录</title>
+</head>
+
+<body>
+            <div class="login-common"
+                         style="background-image: url(../../../../assets/style/front-v5/images/loginbg.png);" 
+                        >
+                    <div class="w1100 rela">
+                        <div class="login-box login-zp">
+                            <h2 class="login-h2">登录</h2>
+
+                            <form id="form-login" action="/user/login/login.htm" method="post" class="login-form">
+                                <!--JS错误提示   login_tip-->
+                                <div class="msg-box">
+                                    <div id="msgWarn" class="login-tip"><span class="err e"><i></i>请勿将密码与账号透露给他人</span></div>
+                                            <div id="msgError" class="login-tip err-tip" style="display: none;"><span class="err e"><i></i></span></div>
+                                </div>
+            
+                                <div class="form-group login-text">
+                                    <label class="lab" for="username"></label>
+                                    <input type="text" id="username" name="username" tabindex="1" value="" placeholder="邮箱/用户名/手机号" maxlength="30">
+                                </div>
+                                <!--<p class="error-tip"><em>用户名不能为空</em></p>-->
+                                
+                                <div class="form-group login-text marb10">
+                                    <label class="lab pass" for="forePassword"></label>
+                                    <input type="password" id="forePassword" name="forePassword" tabindex="2" placeholder="密码" maxlength="20">
+                                    <input type="hidden" id="password" name="password" value="">
+                                </div>
+                                <!--<p class="error-tip"><em>密码错误，请重新输入</em></p>-->
+            
+                                <button type="button" tabindex="4" class="log-login js-btn-submit">立即登录</button>
+
+
+                                <p class="foget">
+                                    <a href="/user/findpassword/init.htm">忘记密码?</a>
+                                    <em>|</em>
+                                    <a href="/user/register/init.htm" class="free-regis">免费注册</a>
+                                    </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+</body>
+
+</body>
+
+</html>

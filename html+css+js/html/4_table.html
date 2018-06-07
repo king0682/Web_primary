@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>>
+</head>
+<body>
+    <!--表格标签：<table>-->
+    <!--功能：格式化数据，按照某种功能显示-->
+    <!--表格中是由行组成的：<tr>-->
+    <!--行是由单元格组成的：<td>，每行有两个单元格-->
+    <!--行还有另外一种单元格：<th>，有居中并加粗的效果-->
+<table>
+    <tr>
+        <td>姓名</td> <td>年龄</td>
+    </tr>
+    <tr>
+        <td>张三</td> <td>30</td>
+    </tr>
+    <tr>
+        <td>李四</td> <td>23</td>
+    </tr>
+</table>
+<hr/>
+
+
+<!--做一个含框的表格，外面是表格的框线，内部是单元格的框线
+    cellpadding：单元格的内边距(文字离单元格的距离)
+    cellspacing：单元格之间的间隔距离，为0的话则取消单元格间的内边距-->
+    <table border="1" bordercolor="#3333ff" width="500px" cellpadding="5" cellspacing="0">
+        <tr>
+            <td>姓名</td> <td>年龄</td>
+        </tr>
+        <tr>
+            <td>张三</td> <td>30</td>
+        </tr>
+        <tr>
+            <td>李四</td> <td>23</td>
+        </tr>
+    </table>
+<hr/>
+
+<!--<th>标签系列-->
+    <table border="1" bordercolor="#3333ff" width="500px">
+            <tr>
+                <th>姓名</th> <th>年龄</th>
+            </tr>
+            <tr>
+                <th>张三</th> <th>30</th>
+            </tr>
+            <tr>
+                <th>李四</th> <th>23</th>
+            </tr>
+        </table>
+<hr/>
+
+<!--跨行跨列colspan(占两列)的功能，不过上面table的属性真实开发都用样式表-->
+    <table border="1" bordercolor="#3333ff" width="500px" cellpadding="5" cellspacing="0">
+        <tr>
+            <th colspan="2">个人信息</th>
+        </tr>
+        <tr>
+            <td>张三</td> <td>30</td>
+        </tr>
+    </table>
+<hr/>
+
+<!--跨行效果-->
+<table border="1" bordercolor="#3333ff" width="500px" cellpadding="5" cellspacing="0">
+    <tr>
+        <th rowspan="2">个人信息</th>
+        <td>李四</td>
+    </tr>
+    <tr>
+        <td>14</td>
+    </tr>
+</table>
+
+<!--<tbody>标签，将网页表格分体，一段段展现<table>，而不是一起展现，以下是整个网页的框架-->
+<table>
+    <thead>
+    ******
+    </thead>
+
+    <tbody>
+        body1
+    </tbody>
+
+    <tbody>
+        body2
+    </tbody>
+
+    <tfoot>
+    ******
+    </tfoot>
+</table>
+
+</body>
+<html>
