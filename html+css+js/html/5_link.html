@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <!--配合功能二的顶部位置-->
+    <a name="top">顶部位置</a>
+    <br/>
+
+    <!--功能一：链接某一资源，启动相关协议，解析对应资源
+    指向资源的超链接，默认效果：下划线，蓝色字体
+    -->
+    <a href="http://www.sina.com.cn">我的超链接</a>
+    <br/>
+
+
+    <!--指向文件
+        浏览器读取超链接的值之前，先要读值前打头的协议
+        因为没有加http/其他协议，都默认用file协议打开，会默认为本地的文件
+        所以点击之前看一下浏览器下方的状态栏-->
+    <a href="www.sina.com.cn">我的超链接</a>
+    <br/>
+
+
+    <!--在新标签打开，用target属性-->
+    <a href="http://www.sina.com.cn" target="_blank">我的超链接</a>
+    <br/>
+
+    <!--发送邮件,mailto:为收件人,?cc=为抄送-->
+    <a href="mailto:abc@sina.com?cc=haha@sohu.com">联系我们</a>
+    <br/>
+    
+    <!--下载文件,任何文件都能下载-->
+    <a href="http://www.thunder.com/movie/bxjg.rmvb">变形金刚</a>
+    <br/>
+
+    <!--自定义加密传输协议thunder
+    注意：点击超链接时，浏览器自动获取href内容，先读取协议：
+    1.浏览器认识协议：执行协议进行解析数据
+    2.浏览器不认识协议：到计算机注册表找是否有对应识别该协议的应用程序，有的话就启动应用程序解析数据
+    -->
+    <a href="thunder://QUFlZDJrOi8vfGZpbGV8JWUzJTgwJTkwbG9sJWU3JTk0">变形金刚迅雷下载</a>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <!--功能二：定位标记（用于常见问题页面等）
+    点击超链接，在本页面跳转，用#表示指向页面某个位置
+    -->
+    <img height="800px" src="./imgs/1.jpg">
+    <br/>    
+    <a href="#top">返回顶部</a>
+    <br/>
+
+    <!--功能三：超链接的另一个应用：默认字体样式和默认事件
+        想要让超链接按照自定义的方式实现点击的效果
+        1.取消默认的点击事件：不让其跳转，包括取消跳转本页的功能(href为空时的默认效果)
+        方法：启用JavaScript协议：javascript:void(0)，代表什么也不做
+        2.通过注册指定事件，定义处理方式，按照自定义的方式运行
+    -->
+    <!--1.实现点击弹窗，但是不跳转-->
+    <a href="javascript:void(0)" onclick="alert('我是超链接')">超链接的重要使用</a>
+
+</body>
+<html>

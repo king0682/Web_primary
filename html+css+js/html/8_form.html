@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <!--重点标签：表单（网页收获完用户的数据，最终要提交到服务端，与服务端交互）
+    写完数据(pc)->服务器端给pc结果 & 服务器能收集信息
+    -->
+
+    <!--记住：表单组件都需要定义name和value属性，目的是为了让服务器端获取用户端提交的数据
+    但是，文本框，密码框，文本区域都可以不指定value属性，因为他们都是value的值-->
+    <!--定义表单的范围-->
+    <form>
+        <h1>用户登录</h1>
+        <!--输入组件（4种）-->
+        01_用户名称：<input type="text" name="user" placeholder="请输入帐户"><br/>
+        02_输入密码：<input type="password" name="psw" placeholder="请输入密码"><br/>
+
+        <!--
+            1.需要给按钮分组，需要用name属性将好多按钮分在一个组，这样才能选择一个
+            2.默认选中：按钮内添加一个checked属性
+        -->
+        03_选择性别：<input type="radio" name="sex" value="male">男<input type="radio" name="sex" value="famale" checked="checked">女<br>
+        04_选择技术：
+        <input type="checkbox" name="checkbox" value="Java"/>Java
+        <input type="checkbox" name="checkbox" value="HTML"/>HTML
+        <input type="checkbox" name="checkbox" value="CSS"/>CSS<br/>
+        05_选择文件：<input type="file" name="file"><br/>
+        <!--功能：客户端无需键入的值，但是需要提交服务端的数据，就放到hidden中，用name和value记录-->
+        06_隐藏区域：<input type="hidden" name="my" value="23"><br/>
+        <!--自定义的事件源：当需要用户点击时，而且不需要有默认事件时，可以单独定义这个button-->
+        07_一个按钮：<input type="button" value="有个按钮" onclick="alert('我弹！')"><br/>
+        <!--带提交功能的图片，为了美化提交/确定按钮，无需name，功能是辅助数据提交客户端-->
+        08_图片一张：<input type="image" src="imgs/1.jpg"><br/>
+        11_选择国家：
+        <!--默认选中用selected-->
+        <select name="country">
+            <option value="none">--选择国家--</option>
+            <option value="China" selected="selected">中国</option>
+            <option value="USA"> 美国</option>
+            <option value="UK">英国</option>
+        </select><br/>
+        12_个人描述
+        <!--输入框-->
+        <textarea name="description" placeholder="描述一下你自己吧" rows="5" cols="25"></textarea>
+        <br/>
+
+        <!--提交和重置按钮-->
+        <!--默认事件原理：将按钮所在的<form>中所有组件中加进来的数据封装后，提交到服务端-->
+        09_<input type="submit" value="提交">
+        <!--将所有的组件还原到初始化状态-->
+        10_<input type="reset" value="重置">
+    </form>
+</body>
+<html>

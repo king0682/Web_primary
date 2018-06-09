@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>框架</title>
+</head>
+
+<!--分隔窗体，分别显示，常用于论坛
+框架标签定义不在<head>标签和<body>标签内部，可以在这两个标签中间
+    
+框架标签特点：
+可以将浏览器窗口切割/分隔成多个子窗体
+每一个子窗体都可以显示一个单独的资源(网页、图片等)
+
+1.将窗体分隔：<frameset>，上下拆分rows(参数可为百分比，全部*)
+2.一旦拆分，就会出现子窗体，子窗体标签<frame>（内部闭合）
+-->
+<!--先对窗体进行上下拆分-->
+<frameset rows="20%,*" noresize="noresize"><!--noresize="noresize"标签是固定分割栏不动-->
+    <!--明确上窗体页面-->
+    <frame src="top.html" />
+    <!--对下子窗体继续进行左右拆分-->
+    <frameset cols="20%,*" noresize="noresize">
+        <frame src="left.html" name="left"/><!--给子窗口起名字，想在哪个窗口打开，就能在哪个打开-->
+        <frame src="right.html" name="right"/>
+</frameset>
+
+
+
+<body>
+
+
+
+</body>
+<html>

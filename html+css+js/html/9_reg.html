@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>POST与GET提交区别</title>
+</head>
+
+<!--
+GET提交与POST提交的区别
+1.存储方式：
+GET：提交信息显示在地址栏
+POST：不会显示在地址栏
+
+2.敏感信息
+GET：不安全
+POST：安全
+
+3.提交数据体积
+GET：存储在地址栏中，数据体积有限
+POST：可以提交大体积数据
+
+4.封装方式
+GET：将提交数据封装在请求头的请求行中
+POST：将提交数据封装在请求体中
+
+GET提交中文：Tomcat服务器，需要通过ISO8859-1先编码，再解码
+POST提交中文：可以先通过ISO8859-1先编码，再解码，也可以通过服务器端的request对象的setCharacterEncoding("GBK")；直接解码（只针对请求体才能进行解码，不能针对请求行）
+
+综上所述：表单提交建议用POST
+如果不涉及大数据和敏感信息，则都可以用
+
+与服务器交互的三种方式（但最终都是发的GET/POST数据，只是发送方式不同而已）
+1.地址栏输入url信息 get
+2.点击超链接 get
+3.表单 get/post
+
+如果在表单页面上加入了校验，判断每一个组件，只要有一个组件填写错误，无法提交
+问：
+1.服务器在收到该数据时，还需要再次校验么？
+    服务端必须校验，因为客户端有可能直接输入URL就注册了，也是为了安全性
+
+2.如果把校验定义在了服务器端，表单页面还需要校验么？
+    需要，为了增强用户的体验效果，为了减轻服务器端的压力（网页里写循环，用<a>标签暴力注册）
+
+    高端点：new一个socket对象，连接某个主机，发送请求头请求体中的数据，挂个死循环
+    -->
+ 
+
+
+<body>
+    <form action="http://192.168.1.253:10000" method="GET">
+        <table border="1" bordercolor="#3333FF" width="700px" cellpadding="10" cellspacing="0">
+            <tr>
+                <th colspan="2">用户注册</th>
+            </tr>
+            <tr>
+                <td>用户名称：</td>
+                <td>
+                    <input type="text" name="user" placeholder="请输入帐户"/>
+                </td>
+            </tr>
+            <tr>
+                <td>输入密码:</td>
+                <td>
+                    <input type="password" name="psw" placeholder="请输入密码">
+                </td>
+            </tr>
+            <tr>
+                <td>确认密码：</td>
+                <td>
+                    <input type="password" name="repsw" placeholder="请确认密码">
+                </td>
+            </tr>
+            <tr>
+                <td>选择性别：</td>
+                <td>
+                    <input type="radio" name="sex" value="male"/>男
+                    <input type="radio" name="sex" value="female"/>男
+                </td>
+            </tr>
+            <tr>
+                <td>选择技术：</td>
+                <td>
+                    <input type="checkbox" name="tech" value="java"/>Java
+                    <input type="checkbox" name="tech" value="html"/>HTML
+                    <input type="checkbox" name="tech" value="css"/>CSS
+                </td>
+            </tr>
+            <tr>
+                <td>选择国家：</td>
+                <td>
+                    <select name="country">
+                        <option value="none">--选择国家--</option>
+                        <option value="china">中国</option>
+                        <option value="usa">美国</option>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="submit" value="提交"/>
+                    <input type="reset" value="重置"/>
+                </th>
+            </tr>
+</body>
+<html>
