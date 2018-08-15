@@ -1,5 +1,3 @@
-<span id"top"></span>
-
 [TOC]
 
 # Day_05--数组
